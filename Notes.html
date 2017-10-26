@@ -1,8 +1,118 @@
-<html>
-	<head>
-		<title>The Notes</title>
-	</head>
-	<body>
-		The contents of the notes.
-	</body>
+﻿<html>
+    <head>
+        <title>Notes</title>
+    </head>
+    <body>
+        <p><a href="#C4">Jump to Chapter 4</a></p>
+        <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://acsjira.honeywell.com">Jira</a></li>
+                <li><a href="https://acssvn.honeywell.com/GreaterChina/EES/Blackbeard/Trunk">SVN: Blackbeard</a></li>
+            </ul>
+        <h2>ToDo List</h2>
+            <ul>
+                <li><a href="#C4">Keep Optimizing Structure of This HTML</a></li>
+                <li>Add wiki about solving the TotalPhase Usb Driver issue. DONE: https://acswiki.honeywell.com/display/JJRNA/How+to+resolve+the+issue+of+TotalPhase+Usb+Driver+installation
+                <a href="https://www.totalphase.com/support/articles/231567367-Driver-Installer-Stuck-at-Removing-phantom-devices-">Solution reference</a>
+                </li>
+                <li>Investigeate the impact that ControlAlg is disabled due to ISU_TSTAT_CONFIGURED not set</li>
+                <li>Fill career profile in HR Direct</li>
+                <li>Investigation of Linux installation on laptop</li>
+                <li>Configure Outlook to filter out more mails, especially from Bamboo</li>
+                <li>Get alignment of ISU ISU_TSTAT_CONFIGURED assignment, follow Jasper Senior? Is the ISU set yet? if yes, who did that?</li>
+                <li>Reenable full CI build plan for Jasper Junior</li>
+                <li>Take over IR related work; Review the transition documents from Zhifei; Get more knowledge of data encryption; <a href="#IRRelated">IR Related Work</li>
+                <li>Draw a figure to show the overall process of IR image generation</li>
+                <li>Streamline the process of IrImage generation</li>
+                <li>Resove problem of PreCommitTool for Brian and Michael</li>
+                <li>Get understanding of the issue of Cap-Touch-Missing-Trigger, a meeting is scheduled at Wednesday 4:00PM</li>
+                <li><a href="http://invisible-island.net/ncurses/ncurses.faq.html">Get some knowledge of module of curses, for text bases terminals</a></li>
+                <li><a href="https://www.w3schools.com/html/default.asp">Get basic knowlege of HTML</a></li>
+                <li>Get familar with RCP Protocol, implemented in source of RemoteConfig.cpp/h</li>
+            </ul>
+        <h2 id="IRRelated">IR Related Work</h2>
+            <div><h3>IR Image Generation</h3>
+                Walk through the IR image generation process; 
+                The entire process includes 3 steps: 1. Extract Brand/Model list from Database; 2. Raw Image Generation; 3. Encrypted Image Generation; 
+                There is randomization mechanism involved in encryption;
+                For actual production phrase, the crenditial for encryption is not fixed but device specific; the tool IrImageBuilder should works as Release version.
+                Result: Download the generatd image into flash, firmware runs Ok;              
+            </div>
+            <div><h3>IR Alert</h3>
+                Alert Asset : ALERT_IR_CONTROL_FAILURE, RF Alert Code - 601;
+                IR Manager Module :
+            </div>
+        <h2>WiFi Remote Configure</h2>
+            
+        <h2>Technical Problems</h2>
+            <ul>
+                <li>The various manners to run python scripts</li>
+                <li>The responsibilities of sub components of WifiRadio, including RCI, RCP and RCICA?</li>
+                <li>What is PKI?</li>
+                <li>Get access to Cloud that is underlying Blackbeard</li>          
+            </ul>
+        <h2>Reading List</h2>
+            <ul>
+                <li><a href="E:\Books\Python\Programming in Python 3 2nd Ed.pdf">Programming In Python 3, 2nd Edition</a></li>
+                <li>Web Scraping with Python</li>
+                <li>Artifical Intelligence, A Modern Approach, 3rd Edition</li>
+            </ul>
+        <h2>Python Language Application</h2>
+            <ul>
+                <li>Web Scraping</li>
+                <li>Machine Learning</li>
+                <li>Natural Language Processing</li>
+            </ul>
+        <h2>Python Modules</h2>
+            <ul>
+                <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a></li>
+            </ul>
+        <h2>Machine Learning</h2>
+        <h2>Artificial Intelligence Basics</h2>
+        <h2>Retrospective</h2>
+            <div>
+                <p>What I did well</p>
+                    <ul>
+                        <li>Good living and working habits</li>
+                        <li>Pursuit of technical excellence</li>
+                        <li>Show leadership in resolving problems and improving colleagues' performance</li>
+                        <li>Show initiatives</li>
+                        <li></li>
+                    </ul>
+                <p>What I should do better</p>
+                    <ul>
+                        <li>Make plans of both short term and long term as guide of actions</li>
+                        <li>Learn from past experience, make summary of both achievements and failure</li>
+                        <li>Presentation skills, both paper and oral</li>
+                    </ul>
+            </div>
+        <h2 id="C4">File Orgnization</h2>
+            <div>
+                <p>This tool aims to shape the way to interact with your computer, make it behaves as you like</p>
+                <p>Use Cases List</p>
+                    <ul>
+                        <li>Display a list of todo lis, which length is configurable</li>
+                        <li>Todo lis in the shown list can be ordered by creation time, due time, priority, complexity</li>
+                        <li>Press up arrow or down arrow to select any todo li, which will be highlighted </li>
+                        <li>New todo li can be easily added through clipboard</li>
+                        <li>New li and existed li can be added or edited in a separate window</li>
+                        <li>Create li to remind me join a meeting</li>
+                        <li>Create li to remind me to reply a mail</li>
+                        <li>Store username and password of a newly created account</li>
+                        <li>Record a technical problem or question, its solution or answer if available</li>
+                        <li>Record a new idea or inspiration comes into mind</li>
+                        <li>In general, it works like a notebook, but is more compact</li>
+                    </ul>
+                <p>Design Consideration</p>
+                    <ul>
+                        <li>The program consists of UI, Storage and Internal Data Rrepresentation</li>
+                        <li>Strorage is implemented in HTML, utilize its various tags and attributes</li>
+                        <li>Internal Data Rrepresentation consists of a collection of classes</li>
+                        <li>UI is implemented through shell window, plain and simple</li>
+                        <li>There should be an engine to drive the world</li>
+                    </ul>
+                <p>Detect Keypress, UI behaves accoridingly, a thread to detect key press, a widget to display a list of strings</p>
+            </div>
+        <h2><a href="Tryit Editor v3.5.html">Local link</a></h2>
+    </body>
 </html>
